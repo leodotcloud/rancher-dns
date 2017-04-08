@@ -41,7 +41,7 @@ func resolveTransport(req *dns.Msg, transport, resolver string) (resp *dns.Msg, 
 		resolver = resolver + ":53"
 	}
 
-	t := time.Duration(*recurserTimeout) * time.Second
+	t := time.Duration(*recurserTimeout) * time.Millisecond
 	c := &dns.Client{
 		Net:          transport,
 		DialTimeout:  t,

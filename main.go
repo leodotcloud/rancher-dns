@@ -31,7 +31,7 @@ var (
 	listenReload    = flag.String("listenReload", "127.0.0.1:8113", "Address to listen to for reload requests (TCP)")
 	answersFile     = flag.String("answers", "./answers.yaml", "File containing the answers to respond with")
 	defaultTtl      = flag.Uint("ttl", 600, "TTL for answers")
-	recurserTimeout = flag.Uint("recurser-timeout", 2, "timeout (in seconds) for recurser")
+	recurserTimeout = flag.Uint("recurser-timeout", 2000, "timeout (in milliseconds) for recurser")
 	ndots           = flag.Uint("ndots", 0, "Queries with more than this number of dots will not use search paths")
 	cacheCapacity   = flag.Uint("cache-capacity", 1000, "Cache capacity")
 	logFile         = flag.String("log", "", "Log file")
